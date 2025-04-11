@@ -1,17 +1,17 @@
 ;
 ;	File 'topol.top' was generated
-;	By user: saikat (0)
-;	On host: saikatgromacs
-;	At date: Sun Jun  2 17:46:53 2024
+;	By user: saikat (1000)
+;	On host: saikat-X570-GAMING-X
+;	At date: Fri May 31 16:08:00 2024
 ;
 ;	This is a standalone topology file
 ;
 ;	Created by:
-;	                    :-) GROMACS - gmx pdb2gmx, 2023.1 (-:
+;	                     :-) GROMACS - gmx pdb2gmx, 2024 (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home3/SOHINIP2/MDM2
+;	Working dir:  /home2/sohini_simmulation/MDM2_run
 ;	Command line:
 ;	  gmx pdb2gmx -f protein.pdb -o protein.gro -ignh
 ;	Force field was read from the standard GROMACS share directory.
@@ -26,11 +26,11 @@
 
 ; Ligand position restraints
 #ifdef POSRES
-#include "posre_AMG_GMX.itp"
+#include "posre_MDM2_GMX.itp"
 #endif
 
 ; Include ligand topology
-#include "AMG_GMX.itp"
+#include "MDM2_GMX.itp"
 
 ; Include water topology
 #include "amber99sb.ff/tip3p.itp"
@@ -47,11 +47,11 @@
 
 [ system ]
 ; Name
-2 MDM2_HUMAN Q00987 E3 ubiquitin-protein ligase Mdm2 in water
+Protein in water
 
 [ molecules ]
 ; Compound        #mols
 Protein_chain_A     1
-Protein_chain_B     1 
-AMG.pdb.mol2        1
-SOL             30706
+Protein_chain_B     1
+MDM2.pdb.mol2       1
+SOL             30733
